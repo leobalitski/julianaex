@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Loja de carros!</title>
+
+    <style>
+        body {
+            background-color: rgb(223, 223, 223);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Loja de carros</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="crud.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </nav>
+    <div class="container"
+        style="background-color:white;padding: 10px 10px 10px 10px; border-radius: 7px; margin-top: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-9">
+                            <h4 class="display-4">Painel de criação e edição</h4>
+                        </div>
+                    </div>
+                </div>
+                <form id="car_form">
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="car_make">Marca</label>
+                            <select id="car_make" name="car_make" class="form-control">
+                                <option value="Fiat">Fiat</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Renault">Renault</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Honda">Honda</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Favor escolher uma marca!
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-2 ml-2">
+                            <label for="car_model">Modelo</label>
+                            <input type="text" class="form-control" id="car_model" placeholder="Modelo">
+                            <div class="invalid-feedback">
+                                Favor informar um modelo.
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-2 ml-2">
+                            <label for="car_color">Cor</label>
+                            <input type="text" class="form-control" id="car_color" placeholder="Cor do carro">
+                            <div class="invalid-feedback">
+                                Favor informar uma cor.
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-2 ml-2">
+                            <label for="car_year">Ano</label>
+                            <input type="number" class="form-control" id="car_year" max="2020"
+                                placeholder="Ano do carro">
+                            <div class="invalid-feedback">
+                                Favor informar o ano do carro.
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn btn-success mt-3" onclick="save()">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"
+        style="background-color:white;padding: 10px 10px 10px 10px; border-radius: 7px; margin-top: 50px;">
+        <div class="row justify-content-md-center">
+            <div class="col-md-3">
+                <h4 class="display-4">Dados</h4>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-11">
+                <table class="table" id="car_table">
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Ano</th>
+                        <th>Cor</th>
+                        <th>Controles</th>
+                    </tr>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="app.js""></script>
+</body>
+
+</html>

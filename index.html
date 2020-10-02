@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de carros</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div>
+        <h1>Loja de carros</h1>
+        <hr>
+        </hr>
+    </div>
+    <div>
+        <h3>DADOS DO CARRO</h3>
+    </div>
+    <div style="margin-top: 15px;">
+        <label>Modelo</label>
+        <input name="modelo" style="margin-left: 8px" type="text" id="car_model" placeholder="Modelo do carro">
+    </div>
+    <div style="margin-top: 15px;">
+        <label>Cor</label>
+        <input style="margin-left: 15px" type="text" id="car_color" placeholder="Cor do carro">
+    </div>
+    <div style="margin-top: 15px;">
+        <label>Marca</label>
+        <select name="car_make" id="car_make">
+            <option value="Fiat">Fiat</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Ford">Ford</option>
+            <option value="Renault">Renault</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Honda">Honda</option>
+        </select>
+    </div>
+    <div style="margin-top: 15px;">
+        <label>Ano</label>
+        <input style="margin-left: 15px" type="number" id="car_year" max="2020" placeholder="Ano do carro">
+    </div>
+
+    <button style="margin-top: 25px" onclick="save()">Salvar</button>
+
+
+    <div style="margin-top: 30px">
+        <h1>DADOS</h1>
+        <table id="car_table">
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Cor</th>
+                <th>Controles</th>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
